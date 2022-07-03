@@ -1,12 +1,13 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateReadme = require('./utils/readme-template.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        name: 'project-title',
+        name: 'title',
         message: 'What is the title of your project? (required)',
         validate: projectTitleInput => {
             if (projectTitleInput) {
@@ -32,7 +33,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'install-instructions',
+        name: 'installation',
         message: 'Enter the installation instructions for your project.',
         validate: installInput => {
             if (installInput) {
@@ -45,7 +46,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'usage-info',
+        name: 'usage',
         message: 'Enter the usage informations for your project.',
         validate: usageInput => {
             if (usageInput) {
@@ -127,6 +128,9 @@ const questions = [
 
 
 inquirer.prompt(questions)
-    .then(answers => {
-        console.log(answers)
+    .then(readmeData => {
+        return generateReadme(readmeData);
+    })
+    .then(README => {
+        console.log(README);
     })
