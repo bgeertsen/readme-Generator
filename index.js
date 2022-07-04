@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateReadme = require('./utils/readme-template.js');
+const readmeTemplate = require('./utils/readme-template.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -72,22 +73,14 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
-        message: 'Please enter test info.',
-        validate: testInput => {
-            if (testInput) {
-                return true;
-            } else {
-                console.log('Please enter test info.');
-                return false;
-            }
-        }
+        name: 'credits',
+        message: 'Please list any collaborators or tutorials used to create your project.',
     },
     {
         type: 'list',
         name: 'license',
         message: 'What licenses would you like your project to use?',
-        choices: ['MIT', 'GPLv2', 'Apache', 'GPLv3']
+        choices: ['mit', 'mpl-2.0', 'apache-2.0', 'gpl-3.0', '']
     },
     {
         type: 'input',
@@ -129,8 +122,8 @@ const questions = [
 
 inquirer.prompt(questions)
     .then(readmeData => {
-        return generateReadme(readmeData);
+        return readmeTemplate(readmeData);
     })
     .then(README => {
-        console.log(README);
+        return generateMarkdown(README);
     })
