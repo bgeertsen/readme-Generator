@@ -39,7 +39,7 @@ I used [lukas-h's license badges](https://gist.github.com/lukas-h/2a5d00690736b4
 
 If you have any additional questions about this project feel free to reach out!<br/>
 GitHub: [bgeertsen](https://github.com/bgeertsen/)<br/>
-Email: sora_x<br/>
+Email: brandon.geertsen@gmail.com<br/>
 
 
 
