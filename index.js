@@ -48,7 +48,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter the usage informations for your project.',
+        message: 'Enter the usage information for your project.',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -112,18 +112,20 @@ const questions = [
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
+// My write file function is in generateMarkdown.js
 
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-
-inquirer.prompt(questions)
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions)
     .then(readmeData => {
         return readmeTemplate(readmeData);
     })
     .then(README => {
         return generateMarkdown(README);
     })
+};
+
+// Function call to initialize app
+init();
+
+

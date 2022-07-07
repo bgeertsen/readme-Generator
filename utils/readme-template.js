@@ -85,7 +85,7 @@ ${credits}
 ## Questions
 
 If you have any additional questions about this project feel free to reach out!<br/>
-GitHub: [${username}](https://github.com/${username})/<br/>
+GitHub: [${username}](https://github.com/${username})<br/>
 Email: ${email}<br/>
 
 
