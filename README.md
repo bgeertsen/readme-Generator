@@ -16,7 +16,7 @@ An easy to use generator for high quality README.md files
 
 ## Installation
 
-Clone the repo to you computer and run 'npm i' in your terminal to installe the necessary packages
+Clone the repo to you computer and run 'npm i' in your terminal to install the necessary packages (Inquirer).
 
 
 ## Usage 
