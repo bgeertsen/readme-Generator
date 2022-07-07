@@ -79,7 +79,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'What licenses would you like your project to use?',
+        message: "What licenses would you like your project to use? If you don't wish to add a license select the empty option at the bottom",
         choices: ['mit', 'mpl-2.0', 'apache-2.0', 'gpl-3.0', '']
     },
     {
@@ -122,6 +122,9 @@ function init() {
     })
     .then(README => {
         return generateMarkdown(README);
+    })
+    .then(() => {
+        console.log("Generated README can be found in ./dist/README.md")
     })
 };
 

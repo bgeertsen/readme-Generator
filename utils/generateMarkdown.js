@@ -9,10 +9,7 @@ function generateMarkdown(data) {
         return;
       }
 
-      resolve({
-        ok: true,
-        message: 'README Created!'
-      })
+      resolve('Generated README can be found in ./dist/README.md')
     })
   })
   
