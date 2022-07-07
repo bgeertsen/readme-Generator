@@ -21,7 +21,9 @@ Clone the repo to you computer and run 'npm i' in your terminal to installe the 
 
 ## Usage 
 
-to use simply run 'node index.js' in the terminal after navigating to the project directory.
+To use simply run 'node index.js' in the terminal after navigating to the project directory.
+
+*Note: If you do not wish to include a license in your README simply select the empty option at the bottom of the license choices.
 
 
 ## Contributing
